@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OCP
 {
-    public class MonitorFilter
+    public class MonitorFilter : IFilter<ComputerMonitor>
     {
-        public List<ComputerMonitor> FilterByType(IEnumerable<ComputerMonitor> monitors, ISpecification<ComputerMonitor> specification)
+        public List<ComputerMonitor> Filter(IEnumerable<ComputerMonitor> monitors, ISpecification<ComputerMonitor> specification)
         {
             return monitors.Where(m => specification.IsSatisfied(m)).ToList();
         }

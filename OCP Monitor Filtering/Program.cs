@@ -20,7 +20,7 @@ namespace OCP
             };
 
             var filter = new MonitorFilter();
-            var lcdMonitors = filter.FilterByType(monitors, new DisplayTypeSpecification(DisplayType.LCD));
+            var lcdMonitors = filter.Filter(monitors, new DisplayTypeSpecification(DisplayType.LCD));
 
             Console.WriteLine("All LCD monitors");
             foreach (var monitor in lcdMonitors)
